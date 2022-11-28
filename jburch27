@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <style>
+   ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+<ul>
+    <li><a href="index.html">By Subject</a></li>
+    <li><a href="#instructor">Search By Instructor</a></li>
+    <li><a href="#academic">Academic Plan</a></li>
+    <li><a href="#course">By Course ID</a></li>
+  </ul>
+
+  <fieldset>
+
+    <legend>Subject:</legend>
+    <select>
+        <option value="agriculture">agriculture</option>
+        <option value="software">software development</option>
+        <option value="biology">biology</option>
+        <option value="chemistry">chemistry</option>
+      </select>
+    
+   </fieldset>
+
+   
+
+   <fieldset>
+    <legend>Course:</legend>
+    <select>
+        <option value="computing logic">computing logic</option>
+        <option value="web development">web development</option>
+        <option value="mobile">mobile application development</option>
+        <option value="intro to software">introduction to software development</option>
+      </select>
+   </fieldset>
+ 
+  
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
