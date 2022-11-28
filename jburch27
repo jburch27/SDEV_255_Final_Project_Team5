@@ -36,6 +36,46 @@ li a:hover {
 </style>
 <ul>
     <li><a href="index.html">By Subject</a></li>
+    <li><a href="instructor.html">Search By Instructor</a></li>
+    <li><a href="academic plan.html">Academic Plan</a></li>
+    <li><a href="course.html">By Course ID</a></li>
+  </ul>
+
+  <fieldset>
+
+    <legend>Subject:</legend>
+    <select>
+        <option value="agriculture">agriculture</option>
+        <option value="software">software development</option>
+        <option value="biology">biology</option>
+        <option value="chemistry">chemistry</option>
+      </select>
+    
+   </fieldset>
+
+   
+
+   <fieldset>
+    <legend>Course:</legend>
+    <select>
+        <option>introduction to agriculture</option>
+        <option>web application development</option>
+        <option>environmental science</option>
+        <option>introductory chemistry</option>
+      </select>
+   </fieldset>
+ 
+  
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+
+</style>
+<ul>
+    <li><a href="index.html">By Subject</a></li>
     <li><a href="#instructor">Search By Instructor</a></li>
     <li><a href="#academic">Academic Plan</a></li>
     <li><a href="#course">By Course ID</a></li>
