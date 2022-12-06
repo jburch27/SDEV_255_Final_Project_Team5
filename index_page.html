@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        // Create a "close" button and append it to each list item
+        var myNodelist = document.getElementsByTagName("LI");
+        var i;
+        for (i = 0; i < myNodelist.length; i++) {
+          var span = document.createElement("SPAN");
+          var txt = document.createTextNode("\u00D7");
+          span.className = "close";
+          span.appendChild(txt);
+          myNodelist[i].appendChild(span);
+        }
+        
+        // Click on a close button to hide the current list item
+        var close = document.getElementsByClassName("close");
+        var i;
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+          }
+        }
+        
+        // Add a "checked" symbol when clicking on a list item
+        var list = document.querySelector('ul');
+        list.addEventListener('click', function(ev) {
+          if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+          }
+        }, false);
+        
+        // Create a new list item when clicking on the "Add" button
+        function newElement() {
+          var li = document.createElement("li");
+          var inputValue = document.getElementById("myInput").value;
+          var t = document.createTextNode(inputValue);
+          li.appendChild(t);
+          if (inputValue === '') {
+            alert("You must add a course!");
+          } else {
+            document.getElementById("myUL").appendChild(li);
+          }
+          document.getElementById("myInput").value = "";
+        
+          var span = document.createElement("SPAN");
+          var txt = document.createTextNode("\u00D7");
+          span.className = "close";
+          span.appendChild(txt);
+          li.appendChild(span);
+        
+          for (i = 0; i < close.length; i++) {
+            close[i].onclick = function() {
+              var div = this.parentElement;
+              div.style.display = "none";
+            }
+          }
+        }
+        
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <style>
+   ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+div ul li {
+    background-color: antiquewhite;
+}
+
+
+</style>
+<ul>
+    <li><a href="index_page.html">By Subject</a></li>
+    <li><a href="instructor.html">Search By Instructor</a></li>
+    <li><a href="academic plan.html">Academic Plan</a></li>
+    <li><a href="course.html">By Course ID</a></li>
+  </ul>
+
+  <fieldset>
+
+    <legend>Subject:</legend>
+
+    <div id="myDIV" class="header">
+        <h2 style="margin:5px">Add Subject</h2>
+        <input type="text" id="myInput" placeholder="Subject...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+    <div>
+      <ul id="myUL">
+        <li></li>
+        <li class="checked"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+      
+
+
+    <select>
+        <option value="agriculture">agriculture</option>
+        <option value="software">software development</option>
+        <option value="biology">biology</option>
+        <option value="chemistry">chemistry</option>
+      </select>
+    
+   </fieldset>
+
+   
+
+   <fieldset>
+    <legend>Course:</legend>
+
+    <div id="myDIV" class="header">
+        <h2 style="margin:5px">Add Course</h2>
+        <input type="text" id="myInput" placeholder="Course...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+      
+      <ul id="myUL">
+        <div>
+        <li class="checked"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    
+    </div>
+
+
+
+
+
+    <form action=" index.html" name="myform" onsubmit="return validate()"> 
+
+
+    <select>
+        <option>introduction to agriculture</option>
+        <option>web application development</option>
+        <option>environmental science</option>
+        <option>introductory chemistry</option>
+      </select>
+      <button onclick="history.back()">Go Back</button>
+      
+     
+      </form>
+   </fieldset>
+
+
+   <div id="myDIV" class="header">
+    <h2 style="margin:5px">Add Course</h2>
+    <input type="text" id="myInput" placeholder="Course...">
+    <span onclick="newElement()" class="addBtn">Add</span>
+  </div>
+  
+  <div>
+  <ul id="myUL">
+    <li></li>
+    <li class="checked"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  </div>
+  
+ 
+   
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
